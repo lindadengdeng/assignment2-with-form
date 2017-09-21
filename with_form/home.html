@@ -1,0 +1,169 @@
+<!DOCTYPE	html>
+<html	lang="en">
+	<head>
+		<meta	charset="UTF-8">
+		<title>Example 2	--	News</title>
+
+	</head>
+	 <link type="text/css"rel="stylesheet" href="style.css" media="all"/>
+	
+	<body>
+		<header class="banner">
+			<h1>Home</h1>
+			<p>Local and National News</p>
+		</header>
+
+		<nav>			
+			<ul>
+				<li class="highlighted"><a href="home.html">Home</a></li>
+				<li><a href="archive.html">Archive</a></li>
+				<li><a href="about.html" id="videolink" onmouseover="bling()" onmouseout="dark()">About</a></li>
+				<li>Search : <input type="text" id="search" onfocus="myFunction1()" onfocusout="myFunction2()"></li>
+			</ul>
+		</nav>
+
+			<main>
+				<section>
+					<h2 id="no1" onmouseover="mouseOver()" onmouseout="mouseOut()">Local News</h2>
+					
+					<article>
+						<header>
+							<h3>Fire Fighters rescue man from buildings</h3>
+							<p>(author, date)</p>
+							</header>
+							<p>This is the story text.This is the story text.</p>
+							<p>This is the story text.This is the story text.</p>
+					</article>
+
+					
+					<article>
+						<header>
+							<h3>Library to be built</h3>
+							<p>(author,date)</p>
+						</header>
+							<p>This is the story text.This is the story text.</p>
+							<p>This is the story text.This is the story text.</p>
+					</article>
+				</section>
+				
+				<section>
+					<h2 id="no2" onmouseover="mouseOver2()" onmouseout="mouseOut2()">National News</h2>
+
+					<article>
+						<header>
+							<h3>Snow storm is making travel difficult</h3>
+							<p>(author, date)</p>
+						</header>
+						<p>This is the story text.This is the story text.</p>
+						<p>This is the story text.This is the story text.</p>
+					</article>
+					
+					<article>
+						<header> 
+						<h3>Thousands are without power</h3>
+						<p>(author, date)</p>
+						</header>
+						<p>This is the story text.This is the story text.</p>
+						<p>This is the story text.This is the story text.</p>
+					</article>
+			</section>
+
+				
+			</main>
+
+			<aside>
+				<header>
+					<h2>Be a news reporter</h2>
+				</header>
+				<p>If you see news happening --  send us a text.</p>
+            </aside>
+              <aside>
+            	<header>
+            		<h2 id="beyourself">Be yourself</h2>
+            	</header>
+            	<p>See what can be shown here.
+           </p>
+             <button onclick="myFunction()" ondblclick="nomore()">
+           Click me to know more!
+           </button>
+           <p id="more"></p>
+            </aside>
+
+            <aside>
+             <form action='null' id="formtext" onsubmit="formfunction()">
+            <h2>Enter name:<h2><input type="text" name="fname" id="formcontent">
+            <input type="submit" value="Submit">
+            </form>
+            </aside>
+
+			<aside id="videobox">
+				<header>
+					<h2>About us</h2>
+				</header>
+				<video width="240" height="180" controls>
+  					<source src="xixi.mp4" type="video/mp4">
+ 					<source src="xixi.ogg" type="video/ogg">
+				Your browser does not support the video tag.
+				</video>
+            </aside>
+
+            <aside id="videobox">
+				<header>
+					<h2>About us</h2>
+				</header>
+				<video width="240" height="180" controls>
+  					<source src="xixi.mp4" type="video/mp4">
+ 					<source src="xixi.ogg" type="video/ogg">
+				Your browser does not support the video tag.
+				</video>
+            </aside>
+
+
+            <script>
+            function myFunction(){
+            	document.getElementById("more").innerHTML="Hello, here is more<br>and more<br>and more";
+            }
+             function nomore(){
+            	document.getElementById("more").innerHTML="<p></p>"
+            }
+             function mouseOver(){
+            	document.getElementById("no1").className="style1";
+            }
+            function mouseOut(){
+            	document.getElementById("no1").className="default";
+            }
+
+              function mouseOver2(){
+            	document.getElementById("no2").className="style2";
+            }
+            function mouseOut2(){
+            	document.getElementById("no2").className="default2";
+            }
+             function myFunction1(){
+            	document.getElementById("search").style.backgroundColor="yellow";
+                  }
+            function myFunction2(){
+            	document.getElementById("search").style.backgroundColor="white";
+            }
+             function bling(){
+            	document.getElementById("videobox").className="bling";
+            }
+            function dark(){
+            	document.getElementById("videobox").className="dark";
+            }
+            document.getElementById("formtext").onsubmit = function() {formfunction()}
+           
+           function formfunction() {
+           var x =document.getElementById("formcontent").value;
+           document.getElementById("beyourself").innerHTML= "YOU SAID "+ x;
+            }
+
+
+            </script>
+	
+		<footer>
+		Footer information
+		</footer>
+	</body>
+</html>
+
